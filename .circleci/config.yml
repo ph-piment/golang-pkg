@@ -25,8 +25,8 @@ jobs:
       - checkout
 
       - run:
-        name: Decode dotenv file
-        command: echo $ENV_FILE | base64 --decode > .env
+          name: Decode dotenv file
+          command: echo $ENV_FILE | base64 --decode > .env
 
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
