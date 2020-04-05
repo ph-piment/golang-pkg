@@ -29,7 +29,7 @@ func GetClient() *redis.Client {
 }
 
 func loadEnv() error {
-	err := godotenv.Load(".env")
+	err := godotenv.Load("/go/src/github.com/ph-piment/golang-pkg/.env")
 	if err != nil {
 		return err
 	}
