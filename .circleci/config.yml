@@ -24,7 +24,11 @@ jobs:
     steps:
       - checkout
 
+      # copy .env.example to .env
+      - run:
+        name: copy dotenv file
+        command: cp ./.env.example ./.env
+
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
       - run: go test -v ./...
-
